@@ -3,7 +3,7 @@
     - Sivtsov Daniil
 2. **Contacts:** 
    * email: danilklin17@gmail.com
-   * telegram: t.me/InspectorGadget123
+   * telegram: [t.me/InspectorGadget123](https://IInspectorGadget.github.io/rsschool-cv/cv)
 3.  **About myself:**
       * The goal is to get a job as a front-end programmer.
       * I have experience in testing applications for android.

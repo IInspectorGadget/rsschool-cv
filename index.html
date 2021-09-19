@@ -10,9 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container">
+        <nav class='nav'>
+            <div class="mobile-menu__btn">
+                <div class="mobile-menu__icon"></div>
+            </div>
+            <ul>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#aboutMe">About me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#languages">Languages</a></li>
+            </ul>
+        </nav>
         <div class="wrapper">
             <header>
                 <div class="header__left">
@@ -20,7 +36,7 @@
                         <h1>Sivtsov Daniil</h1>
                         <h2>Frontend Developer</h2>
                     </div>
-                    <section class="contacts">
+                    <section id="contacts" class="contacts">
                         <h3>Contacts</h3>
                         <ul>
                             <li>
@@ -39,20 +55,20 @@
                     </section>
                 </div>
                 <div class="header__right">
-                    <img src="images/avatar.jpg" alt="">
+                    <img src="images/avatar.jpg" alt="аватар">
                 </div>
             </header>
             <main>
     
             
                 <div class="left-section">
-                    <section class="about">
+                    <section id="aboutMe" class="about">
                         <div class="section-header">
                             <h4>About Me</h4>
                         </div>
                         <p>I am a student of higher education in the direction "Fundamental Informatics and Information Technology" (program "Software Engineering"). I have the ability to learn quickly and learn new things. The goal is to get a job as a front-end programmer. </p>
                     </section>
-                    <section class="education">
+                    <section id="education" class="education">
                         <div class="section-header">
                             <h4>Education</h4>
                         </div>
@@ -70,13 +86,13 @@
                             </li>
                         </ul>
                     </section>
-                    <section class="code-example">
+                    <section class="code-example" id='example'>
                         <div class="section-header">
                             <h4>Code Example</h4>
                         </div>
                         <p>Peak array index KATA from CODEWARS: Build Tower by the following given argument:
                             number of floors (integer and always greater than 0).</p>
-        <pre><code>function towerBuilder(nFloors) {
+        <pre><code class='language-javascript'>function towerBuilder(nFloors) {
     return Array.from({ length: nFloors }, (v, k) =>  {
         return (
             " ".repeat(nFloors - k - 1) +
@@ -90,7 +106,7 @@
                 </div>
     
                 <aside>
-                    <section class="skills">
+                    <section id='skills' class="skills">
                         <div class="section-header-right">
                             <h5 class='first-header'>Skills</h5>
                         </div>
@@ -105,7 +121,7 @@
                             <li>Figma</li>
                           </ul>
                     </section>
-                    <section class="languages">
+                    <section id='languages' class="languages">
                         <div class="section-header-right">
                             <h5>LANGUAGES</h5>
                         </div>
@@ -117,7 +133,7 @@
                 </aside>
             </main>
         </div>
-            <footer>
+            <footer id='ex'>
                 <a class="github" href="https://github.com/IInspectorGadget">
                   <img class="github-icon" src="./icons/github.svg" alt="Github Icon" >
                   <p>Visit my GitHub</p>
@@ -131,4 +147,5 @@
         
     </div>
 </body>
+<script src="scripts/index.js"></script>
 </html>

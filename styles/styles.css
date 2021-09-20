@@ -208,6 +208,9 @@ aside{
 
 
 @media screen and (max-width: 660px) {
+    .container{
+        margin-top: 0px;
+    }
     .header__right{
         width: 100%;
     }
@@ -215,15 +218,37 @@ aside{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-     }
-     .header__left{
-         width: inherit;
-         justify-content: center;
-         justify-self: center;
-     }
-     .name{
-         text-align: center;
-     }
+    }
+    .header__left{
+        width: inherit;
+        justify-content: center;
+        justify-self: center;
+    }
+    .name{
+        text-align: center;
+    }
+    .nav{
+        padding: 0px;
+    }
+    .nav ul{
+        display: none;
+    }
+    .nav-active{
+    }
+    .nav-active ul{
+        flex-direction: column;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .nav .mobile-menu__btn{
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 5%;
+    }
+    
+
   }
 @media screen and (max-width: 620px) {
     .wrapper{
@@ -248,6 +273,7 @@ aside{
     aside ul{
         padding-left: 60px
     }
+    
 }
 
 @media screen and (max-width: 530px) {
@@ -269,4 +295,103 @@ aside{
     pre{
         font-size: 0.8em;
     }
+}
+
+
+
+
+
+nav{
+   background-color: #505050; 
+   padding: 10px
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    padding: 10px;
+}
+nav a{
+    
+    color: #fff
+}
+
+.mobile-menu__btn{
+    color: #fff;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+    z-index: 999;
+    display: none;
+}
+
+.mobile-menu__icon{
+    color: #505050;
+    cursor: pointer;
+    top: 50%;
+    position: relative;
+    background: #505050;
+    width: 90%;
+    height: 4px;
+    transition: all .3s,height 0s;
+    display: block;
+}
+
+.mobile-menu__icon::before{
+    top: -8px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #505050;
+    width: 100%;
+    height: 4px;
+    transition: all .3s,height 0s;
+}
+
+.mobile-menu__icon::after{
+    top: 8px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #505050;
+    width: 100%;
+    height: 4px;
+    transition: all .3s,height 0s;
+}
+
+.mobile-menu__icon-active{
+    height: 0;
+}
+
+.mobile-menu__icon-active::before{
+    top: 0!important;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+.mobile-menu__icon-active::after{
+    background: #fff;
+    top: 0!important;
+    transform: rotate(-45deg);
+}
+
+.nav-active ul{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+}
+
+.nav-active{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+nav a:hover{
+    color:#fff;
+    
 }

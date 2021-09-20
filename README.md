@@ -1,2 +1,2 @@
 # rsschool-cv
-https://iinspectorGadget.github.io/rsschool-cv/
+https://iinspectorgadget.github.io/rsschool-cv/
